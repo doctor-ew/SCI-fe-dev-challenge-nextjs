@@ -4,18 +4,19 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #eeeeee;
+  --card-container-bg-color: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #1e1e1e;
+  --foreground: #202020;
+  --card-container-bg-color: #f8f9fa;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

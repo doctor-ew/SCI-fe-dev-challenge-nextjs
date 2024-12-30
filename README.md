@@ -72,3 +72,26 @@ Go the extra mile by implementing the following:
 - Have fun, and don’t hesitate to ask questions or showcase unique ideas!
 
 ---
+
+The changes made to this challenge were:
+
+- Fixing the test errors
+- Cards can be sorted by HP.
+- Cards can be sorted by a range of HP numbers.
+- Removed the HP numbers that didn't render any data at all
+- Updated button styling and hover effects
+- Added transitions for sorting and loading
+- Cards flip on click 
+- Stats are revealed on the back of the cards on flip
+- Added Animate.CSS to make future animation and transitions easier to scale
+- Added Heroicons for future use as well as labels
+- Added a toggle for light and dark mode
+
+Ways I would continue to iterate:
+
+- Update styling to stats
+- Update styling to the card fronts to make them more animated
+- Improve load time on fetch when user sets a range
+- Research more transitions
+- Improve colors and typography
+- Add additional testing

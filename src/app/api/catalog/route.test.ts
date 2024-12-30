@@ -6,6 +6,7 @@ describe('/api/catalog GET', () => {
     });
 
     it('should return a list of HP options', async () => {
+        
         global.fetch = jest.fn().mockResolvedValueOnce({
             ok: true,
             json: async () => ({
@@ -16,18 +17,19 @@ describe('/api/catalog GET', () => {
             }),
         });
 
-        const response = await GET();
+        const response = await GET(); 
         const result = await response.json();
 
         expect(response.status).toBe(200);
-        expect(result.object).toBe('catalogue');
+        expect(result.object).toBe('catalog');
         expect(Array.isArray(result.data)).toBe(true);
     });
 
     it('should return 500 when fetch fails', async () => {
+        // Mocking a rejected fetch API call
         global.fetch = jest.fn().mockRejectedValueOnce(new Error('Failed to fetch data'));
 
-        const response = await GET();
+        const response = await GET(); 
         const result = await response.json();
 
         expect(response.status).toBe(500);

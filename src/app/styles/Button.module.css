@@ -1,0 +1,44 @@
+.button {
+    background: none;
+    border: 2px solid var(--color);
+    color: var(--color);
+    padding: 0.625rem 1.25rem;
+    margin: 0.625rem;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 0.25rem 0.5rem var(--color);
+    color: white;
+    border-color: var(--color);
+}
+
+.raise {
+    transition: transform 0.25s, box-shadow 0.25s ease-in-out;
+}
+
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.3125rem 0.3125rem -0.25rem var(--color);
+    transform: translateY(-0.15625rem);
+}
+
+.blue {
+    --color: #0056cc;
+}
+
+.green {
+    --color: #1e7a3c;
+}
+
+.purple {
+    --color: #5a34a1;
+}
+
+.red {
+    --color: #b31c34;
+}
