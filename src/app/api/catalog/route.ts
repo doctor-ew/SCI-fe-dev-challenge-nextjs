@@ -1,7 +1,6 @@
-// app/api/catalog/route.ts
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+export async function GET() { 
     try {
         const res = await fetch('https://api.swu-db.com/catalog/hps');
         if (!res.ok) throw new Error('Failed to fetch data');
@@ -12,3 +11,4 @@ export async function GET() {
         return NextResponse.json({ error: 'Failed to fetch catalog data' }, { status: 500 });
     }
 }
+

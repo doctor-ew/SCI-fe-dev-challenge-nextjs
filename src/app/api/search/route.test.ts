@@ -14,24 +14,24 @@ describe('/api/search GET', () => {
                     {
                         Set: 'TWI',
                         Number: '096',
-                        name: 'Aayla Secura',
-
+                        name: 'Aayla Secura', // Ensure consistency with this structure
                     },
                 ],
             }),
         });
-
+    
         const mockRequest = {
             url: 'https://example.com/api/search?hp=5',
         } as Request;
-
+    
         const response = await GET(mockRequest);
         const result = await response.json();
-
+    
         expect(response.status).toBe(200);
         expect(result.total_cards).toBe(1);
-        expect(result.data[0].Name).toBe('Aayla Secura');
+        expect(result.data[0].name).toBe('Aayla Secura'); // Use lowercase "name"
     });
+    
 
     it('should return 500 when fetch fails', async () => {
         global.fetch = jest.fn().mockRejectedValueOnce(new Error('Failed to fetch cards'));
