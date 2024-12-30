@@ -23,7 +23,9 @@ export default function Dropdown({ onSelect, selectedValue }: DropdownProps) {
         setOptions(filteredOptions);
         setLoading(false);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "An unknown error occurred");
+        setError(
+          err instanceof Error ? err.message : "An unknown error occurred"
+        );
         setLoading(false);
       }
     }

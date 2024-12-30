@@ -8,11 +8,6 @@ export async function GET(mockRequest: Request) {
         const hpDecoded = decodeURIComponent(hp);
         const rangeDecoded = decodeURIComponent(range);
 
-        console.log("Received hp parameter:", hp);
-        console.log("Decoded hp parameter:", hpDecoded);
-        console.log("Received range parameter:", range);
-        console.log("Decoded range parameter:", rangeDecoded);
-
         let query = "";
         if (range) {
             // If range is provided, build a range query
@@ -28,8 +23,6 @@ export async function GET(mockRequest: Request) {
             // If neither hp nor range is provided, return an error
             return NextResponse.json({ error: "No valid query parameter provided" }, { status: 400 });
         }
-
-        console.log("Constructed query:", query);
 
         const res = await fetch(`https://api.swu-db.com/cards/search?q=${query}&pretty=true`);
         console.log("Upstream API status:", res.status);

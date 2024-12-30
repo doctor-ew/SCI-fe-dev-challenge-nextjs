@@ -53,7 +53,10 @@ export default function Header({
 
       <div className="flex items-center gap-4 mt-4">
         <SunIcon className="w-6 h-6 text-yellow-500 dark:text-orange-500" />
-        <label htmlFor="theme" className="relative inline-flex items-center cursor-pointer">
+        <label
+          htmlFor="theme"
+          className="relative inline-flex items-center cursor-pointer"
+        >
           <input
             id="theme"
             type="checkbox"
